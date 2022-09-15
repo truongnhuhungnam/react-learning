@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-const TwoWayBinding = () => {
-    const [gift, setgift] = useState("Chưa có phần thưởng");
+const RandomGift = () => {
     const gifts = ["CPU i9", "RAM 32GB", "Keyboard"];
+    const [gift, setgift] = useState("Chưa có phần thưởng");
     const handleClick = () => {
-        let giftId = Math.floor(Math.random() * 3);
-        setgift(gifts[giftId]);
+        let giftIndex = Math.floor(Math.random() * gifts.length);
+        setgift(gifts[giftIndex]);
     };
 
     return (
@@ -15,4 +15,4 @@ const TwoWayBinding = () => {
     );
 };
 
-export default TwoWayBinding;
+export default RandomGift;
