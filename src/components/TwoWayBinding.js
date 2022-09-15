@@ -37,7 +37,7 @@ const TwoWayBinding = () => {
     };
 
     const handleSubmitCheckbox = () => {
-        console.log({ checkboxChecked });
+        console.log([checkboxChecked]);
     };
 
     return (
