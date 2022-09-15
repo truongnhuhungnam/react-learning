@@ -1,9 +1,9 @@
-import RandomGift from "./components/RandomGift";
+import TwoWayBinding from "./components/TwoWayBinding";
 
 function App() {
     return (
         <div className="App">
-            <RandomGift />
+            <TwoWayBinding />
         </div>
     );
 }

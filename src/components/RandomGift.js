@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+
+const gifts = ["CPU i9", "RAM 32GB", "Keyboard"];
+
 const RandomGift = () => {
-    const gifts = ["CPU i9", "RAM 32GB", "Keyboard"];
     const [gift, setgift] = useState("Chưa có phần thưởng");
     const handleClick = () => {
         let giftIndex = Math.floor(Math.random() * gifts.length);
