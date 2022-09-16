@@ -1,9 +1,11 @@
-import TwoWayBinding from "./components/TwoWayBinding";
+import TodoList from "./components/TodoList";
 
 function App() {
     return (
         <div className="App">
-            <TwoWayBinding />
+            <div className="container mx-auto py-8">
+                <TodoList />
+            </div>
         </div>
     );
 }
