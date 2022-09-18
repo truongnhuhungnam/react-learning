@@ -17,6 +17,7 @@ const UseEffect = () => {
     const [title, setTitle] = useState("");
     const [posts, setPosts] = useState([]);
     const [type, setType] = useState("posts");
+    const [showToTop, setShowToTop] = useState(false);
 
     useEffect(() => {
         console.log("Type changed");
@@ -26,6 +27,15 @@ const UseEffect = () => {
                 setPosts(posts);
             });
     }, [type]);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            // window.scrollY >= 200 ? setShowToTop(true) : setShowToTop(false);
+            setShowToTop(window.scrollY >= 200);
+        };
+
+        window.addEventListener("scroll", handleScroll);
+    }, []);
 
     return (
         <div>
@@ -49,6 +59,11 @@ const UseEffect = () => {
                     <li key={post.id}>{post.title || post.name}</li>
                 ))}
             </ul>
+            {showToTop && (
+                <div className="fixed bottom-0.5 right-0.5 bg-red-500 text-white border py-2 px-4">
+                    ToTop
+                </div>
+            )}
         </div>
     );
 };
