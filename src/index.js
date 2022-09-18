@@ -6,24 +6,24 @@ import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-function emitComment(id) {
-    setInterval(() => {
-        window.dispatchEvent(
-            new CustomEvent(`lesson-${id}`, {
-                detail: `Nội dung comment của lesson ${id}`,
-            })
-        );
-    }, 2000);
-}
+// function emitComment(id) {
+//     setInterval(() => {
+//         window.dispatchEvent(
+//             new CustomEvent(`lesson-${id}`, {
+//                 detail: `Nội dung comment của lesson ${id}`,
+//             })
+//         );
+//     }, 2000);
+// }
 
-emitComment(1);
-emitComment(2);
-emitComment(3);
+// emitComment(1);
+// emitComment(2);
+// emitComment(3);
 
 root.render(
-    // <React.StrictMode>
-    <App />
-    /* </React.StrictMode> */
+    <React.StrictMode>
+        <App />
+    </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
