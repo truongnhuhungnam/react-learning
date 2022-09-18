@@ -1,5 +1,5 @@
 import { useState } from "react";
-import ResizeUseEffect from "./components/ResizeUseEffect";
+import TimerUseEffect from "./components/TimerUseEffect";
 
 function App() {
     const [show, setShow] = useState(false);
@@ -12,7 +12,7 @@ function App() {
                 >
                     Toggle
                 </button>
-                {show && <ResizeUseEffect />}
+                {show && <TimerUseEffect />}
             </div>
         </div>
     );
