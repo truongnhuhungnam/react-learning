@@ -1,5 +1,5 @@
 import { useState } from "react";
-import UseMemo from "./components/UseMemo";
+import UseReducer from "./components/UseReducer";
 
 function App() {
     const [show, setShow] = useState(false);
@@ -12,7 +12,7 @@ function App() {
                 >
                     Toggle
                 </button>
-                {show && <UseMemo />}
+                {show && <UseReducer />}
             </div>
         </div>
     );
