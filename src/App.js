@@ -1,5 +1,5 @@
 import { useState } from "react";
-import UseLayoutEffect from "./components/UseLayoutEffect";
+import UseRef from "./components/UseRef";
 
 function App() {
     const [show, setShow] = useState(false);
@@ -12,7 +12,7 @@ function App() {
                 >
                     Toggle
                 </button>
-                {show && <UseLayoutEffect />}
+                {show && <UseRef />}
             </div>
         </div>
     );
