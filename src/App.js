@@ -1,5 +1,5 @@
 import { useState } from "react";
-import PreviewAvatarUseEffect from "./components/PreviewAvatarUseEffect";
+import FakeChatAppUseEffect from "./components/FakeChatAppUseEffect";
 
 function App() {
     const [show, setShow] = useState(false);
@@ -12,7 +12,7 @@ function App() {
                 >
                     Toggle
                 </button>
-                {show && <PreviewAvatarUseEffect />}
+                {show && <FakeChatAppUseEffect />}
             </div>
         </div>
     );
