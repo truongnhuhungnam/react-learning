@@ -1,5 +1,5 @@
 import { useState } from "react";
-import UseCallback from "./components/UseCallback";
+import UseMemo from "./components/UseMemo";
 
 function App() {
     const [show, setShow] = useState(false);
@@ -12,7 +12,7 @@ function App() {
                 >
                     Toggle
                 </button>
-                {show && <UseCallback />}
+                {show && <UseMemo />}
             </div>
         </div>
     );
