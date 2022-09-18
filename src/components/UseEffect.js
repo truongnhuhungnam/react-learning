@@ -10,6 +10,7 @@ import { useEffect, useState } from "react";
 // Callback sẽ dc gọi lại mỗi khi dép thay đổi
 
 // Callback luôn dc gọi sau khi component dc mount
+// Cleanup function luôn được gọi trước khi component unmount
 
 const tabs = ["posts", "comments", "albums"];
 
@@ -20,7 +21,7 @@ const UseEffect = () => {
     const [showToTop, setShowToTop] = useState(false);
 
     useEffect(() => {
-        console.log("Type changed");
+        // console.log("Type changed");
         fetch(`https://jsonplaceholder.typicode.com/${type}`)
             .then((res) => res.json())
             .then((posts) => {
@@ -35,6 +36,12 @@ const UseEffect = () => {
         };
 
         window.addEventListener("scroll", handleScroll);
+        console.log("addEventListener");
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+            console.log("removeEventListener");
+        };
     }, []);
 
     return (

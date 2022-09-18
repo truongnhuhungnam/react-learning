@@ -1,5 +1,5 @@
 import { useState } from "react";
-import UseEffect from "./components/UseEffect";
+import ResizeUseEffect from "./components/ResizeUseEffect";
 
 function App() {
     const [show, setShow] = useState(false);
@@ -12,7 +12,7 @@ function App() {
                 >
                     Toggle
                 </button>
-                {show && <UseEffect />}
+                {show && <ResizeUseEffect />}
             </div>
         </div>
     );
