@@ -1,6 +1,6 @@
 import { useState } from "react";
-import UseContext from "./components/useContext/UseContext";
 import { ThemeProvider } from "./components/useContext/ThemeContext";
+import UseImperativeHandle from "./components/UseImperativeHandle";
 
 function App() {
     const [show, setShow] = useState(false);
@@ -14,7 +14,7 @@ function App() {
                     >
                         Toggle
                     </button>
-                    {show && <UseContext />}
+                    {show && <UseImperativeHandle />}
                 </div>
             </div>
         </ThemeProvider>
