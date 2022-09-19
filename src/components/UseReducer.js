@@ -17,9 +17,10 @@ const initState = 0;
 // 2. Action
 const UP_ACTION = "up";
 const DOWN_ACTION = "down";
+const RESET_ACTION = "reset";
 
 // 3. Reducer
-const reduce = (state, action) => {
+const reducer = (state, action) => {
     switch (action) {
         case UP_ACTION:
             return state + 1;
@@ -27,19 +28,38 @@ const reduce = (state, action) => {
         case DOWN_ACTION:
             return state - 1;
 
+        case RESET_ACTION:
+            return initState;
+
         default:
             throw new Error("Unknown action");
     }
 };
 
 const UseReducer = () => {
-    const [count, dispatch] = useReducer(reduce, initState);
+    const [count, dispatch] = useReducer(reducer, initState);
 
     return (
         <div>
-            <h1>{count}</h1>
-            <button onClick={() => dispatch(UP_ACTION)}>Up</button>
-            <button onClick={() => dispatch(DOWN_ACTION)}>Down</button>
+            <h1 className="text-2xl">{count}</h1>
+            <button
+                onClick={() => dispatch(UP_ACTION)}
+                className="bg-black text-white px-6 py-2 mr-4 font-bold"
+            >
+                Up
+            </button>
+            <button
+                onClick={() => dispatch(DOWN_ACTION)}
+                className="bg-black text-white px-6 py-2 mr-4 font-bold"
+            >
+                Down
+            </button>
+            <button
+                onClick={() => dispatch(RESET_ACTION)}
+                className="bg-black text-white px-6 py-2 mr-4 font-bold"
+            >
+                Reset
+            </button>
         </div>
     );
 };
