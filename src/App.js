@@ -1,5 +1,5 @@
 import { useState } from "react";
-import UseReducer from "./components/UseReducer";
+import TodoListUseReducer from "./components/TodoListUseReducer";
 
 function App() {
     const [show, setShow] = useState(false);
@@ -12,7 +12,7 @@ function App() {
                 >
                     Toggle
                 </button>
-                {show && <UseReducer />}
+                {show && <TodoListUseReducer />}
             </div>
         </div>
     );
